@@ -7,6 +7,8 @@ require_once "PATH/TO/LIB/GitKargo.php";
 $gitKargo = new GitKargo;
 ```
 Thats it!
+
+# Usage
 ## send() Example
 To send package information to Git Kargo.
 
