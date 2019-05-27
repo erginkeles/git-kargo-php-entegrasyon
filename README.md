@@ -32,14 +32,7 @@ $send = $gitKargo->send();
 print_r($send);
 ```
 
-send() method returns an array of:
-```php
-array(
-	"status" => "error or success",
-	"message" => "a message",
-	"order_id" => "Git Kargo order id"
-)
-```
+send() method returns an **array** with **status**, **message** and **order_id** keys.
 
 **status** will be **success** if a shipment data successfully created on Git Kargo. **order_id** will be the Git Kargo order id. Otherwise, status returns error, order_id returns 0 and message will be the error message returned from Git Kargo.
 
@@ -68,15 +61,6 @@ $track = $gitKargo->trackBySpecialTrackingNumber();
 print_r($track);
 ```
 
-Both trackByOrderId() and trackBySpecialTrackingNumber() methods returns an array of:
-
-```php
-return array(
-	"status" => "error or success",
-	"message" => "a message",
-	"orderStatus" => "current status of the order",
-	"orderMovements" => "movements of shipment array"
-);
-```
+Both trackByOrderId() and trackBySpecialTrackingNumber() methods returns an **array** with **status**, **message**, **orderStatus**, **orderMovements** keys.
 
 **status** will be success if a shipment data found on Git Kargo. If it is "success", then the current status of the order and movements will be returned on the array.
